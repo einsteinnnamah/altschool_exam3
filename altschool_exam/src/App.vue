@@ -1,8 +1,7 @@
 <template>
-  <nav>
+  <!-- <nav>
     <router-link to="/" class=""></router-link>
-    <!-- <router-link to="/innerpage">About</router-link> -->
-  </nav>
+  </nav> -->
   <router-view />
 </template>
 
@@ -11,3 +10,10 @@ export default {
   name: "app",
 };
 </script>
+
+<style>
+@font-face {
+  font-family: "Bespoke Stencil";
+  src: url("@/Fonts/BespokeStencil-Extrabold.ttf") format("truetype");
+}
+</style>
