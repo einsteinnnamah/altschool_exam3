@@ -12,7 +12,9 @@
     </div>
     <div class="text-white" v-if="loading">Loading...</div>
     <div class="text-white">
-      <button @click="previousPage" :disabled="page <= 1">Previous</button>
+      <button @click="previousPage" :disabled="page <= 1" v-if="page > 1">
+        Previous
+      </button>
       <span v-for="pageNumber in pageNumbers" :key="pageNumber">
         <button
           @click="setPage(pageNumber)"
@@ -21,7 +23,13 @@
           {{ pageNumber }}
         </button>
       </span>
-      <button @click="nextPage" :disabled="page >= pageCount">Next</button>
+      <button
+        @click="nextPage"
+        :disabled="page >= pageCount"
+        v-if="page < pageCount"
+      >
+        Next
+      </button>
     </div>
   </div>
 </template>
