@@ -9,10 +9,9 @@ const routes = [
     component: HomePage,
   },
   {
-    path: "/repo/:id",
-    name: "RepoDetails",
+    path: "/repos/:id",
+    name: "RepoDetail",
     component: RepoDetails,
-    props: true,
   },
   {
     path: "/:pathMatch(.*)",
