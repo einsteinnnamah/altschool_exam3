@@ -20,7 +20,8 @@
               <span class="text-[#787676]">Language: </span>{{ repo.language }}
             </p>
             <p class="flex justify-between">
-              <span class="text-[#787676]">Created at: </span>{{ repo.created_at }}
+              <span class="text-[#787676]">Created at: </span
+              >{{ repo.created_at }}
             </p>
           </div>
         </div>
