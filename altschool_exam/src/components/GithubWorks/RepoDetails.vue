@@ -1,22 +1,43 @@
 <template>
-  <div>
-    <h2>{{ repo.name }}</h2>
-    <div v-if="loading">Loading...</div>
-    <div v-else>
-      <p>{{ repo.description }}</p>
-      <p>Language: {{ repo.language }}</p>
-      <p>Created at: {{ repo.created_at }}</p>
+  <div class="bg-background_img h-screen w-screen">
+    <HeaderView />
+    <div
+      class="px-[16px] py-[16px] md:px-[24px] md:py-[24px] w-[1440px] mx-auto items-start gap-[497px]"
+    >
+      <button
+        class="text-white bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5] px-[14px] py-[10px] rounded-full"
+        @click="goBack"
+      >
+        Back to Repos
+      </button>
+      <div class="flex flex-col items-center justify-center">
+        <div class="bg-white text-black w-[600px] p-5">
+          <h2>{{ repo.name }}</h2>
+          <div v-if="loading">Loading...</div>
+          <div v-else>
+            <p>{{ repo.description }}</p>
+            <p class="flex justify-between">
+              <span class="text-[#787676]">Language: </span>{{ repo.language }}
+            </p>
+            <p class="flex justify-between">
+              <span class="text-[#787676]">Created at: </span>{{ repo.created_at }}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <button @click="goBack">Back to Repos</button>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-
+import HeaderView from "../HeaderView.vue";
 export default {
   name: "RepoDetails",
   props: ["id"],
+  components: {
+    HeaderView,
+  },
   data() {
     return {
       repo: {},
