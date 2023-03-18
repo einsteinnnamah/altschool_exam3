@@ -2,7 +2,7 @@
   <div class="bg-background_img h-screen w-screen">
     <HeaderView />
     <div
-      class="px-[16px] py-[16px] md:px-[24px] md:py-[24px] w-[1440px] mx-auto items-start gap-[497px]"
+      class="px-[16px] py-[16px] md:px-[24px] md:py-[24px] items-start gap-[497px]"
     >
       <button
         class="text-white bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5] px-[14px] py-[10px] rounded-full"
@@ -10,8 +10,8 @@
       >
         Back to Repos
       </button>
-      <div class="flex flex-col items-center justify-center">
-        <div class="bg-white text-black w-[600px] p-5">
+      <div class="flex flex-col md:items-center items-start justify-center">
+        <div class="bg-white text-black w-[300px] md:w-[600px] p-5">
           <h2>{{ repo.name }}</h2>
           <div v-if="loading">Loading...</div>
           <div v-else>
