@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-background_img h-screen w-screen">
+  <div class="bg-background_img h-screen bg-cover w-screen">
     <HeaderView />
     <Body />
     <ShowCase />
