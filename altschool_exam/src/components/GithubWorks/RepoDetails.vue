@@ -12,10 +12,10 @@
       </button>
       <div class="flex flex-col items-center justify-center">
         <div class="bg-white text-black w-[300px] md:w-[600px] p-5">
-          <h2>{{ repo.name }}</h2>
+          <h2 class="font-[700]">{{ repo.name }}</h2>
           <div v-if="loading">Loading...</div>
           <div v-else>
-            <p>{{ repo.description }}</p>
+            <p class="pb-[16px]">{{ repo.description }}</p>
             <p class="flex justify-between">
               <span class="text-[#787676]">Language: </span>{{ repo.language }}
             </p>
@@ -23,6 +23,16 @@
               <span class="text-[#787676]">Created at: </span
               >{{ repo.created_at }}
             </p>
+            <p class="flex justify-between">
+              <span class="text-[#787676]">Private Repo: </span
+              >{{ repo.private }}
+            </p>
+            <p class="flex justify-between">
+              <span class="text-[#787676]">No of Fork: </span>{{ repo.fork }}
+            </p>
+            <button class="text-[#1e1e1e]" @click="goToRepoPage">
+              Click to view Repo Page on GitHub
+            </button>
           </div>
         </div>
       </div>
@@ -66,6 +76,9 @@ export default {
     viewDetails() {
       console.log("viewDetails", this.repo.id);
       this.$router.push({ name: "RepoDetail", params: { id: this.repo.id } });
+    },
+    goToRepoPage() {
+      window.open(this.repo.html_url);
     },
     goBack() {
       this.$router.push("/");

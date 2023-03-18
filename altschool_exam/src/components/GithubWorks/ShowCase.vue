@@ -1,25 +1,28 @@
 <template>
-  <div class="bg-white h-[719px] w-screen">
+  <div class="bg-white h-nax w-screen">
     <div class="flex flex-col items-center">
       <h1
+        style="font-family: 'Bespoke Stencil'"
         class="font-extrabold mt-[76px] text-[22px] md:text-[48px] py-[10px] bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5] inline-block text-transparent bg-clip-text"
       >
         Github Works
       </h1>
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-[38px] gap-x-[20px] gap-y-[50px] justify-items-center items-center"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 mt-[38px] gap-x-[20px] gap-y-[50px] justify-items-center items-center"
       >
         <div
           class="text-white bg-[#1e1e1e] rounded-[10px] mb-4 w-full"
           v-for="repo in displayedRepos"
           :key="repo.id"
         >
-          <div class="w-[300px] h-[130px] p-3 gap-x-[50px] md:gap-x-[100px]">
+          <div
+            class="w-[300px] md:h-[130px] h-[140px] p-3 gap-x-[50px] md:gap-x-[100px]"
+          >
             <div>
               <span class="text-[#AAAAAA]">Repo Name</span>
               <p>{{ repo.name }}</p>
             </div>
-            <div class="flex flex-col md:flex-row gap-[10px] mt-[8px]">
+            <div class="flex flex-col md:flex-row justify-between mt-[8px]">
               <p><span class="text-[#AAAAAA]">Repo Id: </span>{{ repo.id }}</p>
               <router-link class="text-[#AAAAAA]" :to="'/repos/' + repo.id">
                 View Info
@@ -29,7 +32,9 @@
         </div>
       </div>
       <div class="text-[#1e1e1e]" v-if="loading">Loading...</div>
-      <div class="text-[#1e1e1e] flex gap-x-[20px] items-center justify-center">
+      <div
+        class="text-[#1e1e1e] flex gap-x-[20px] items-center justify-center mb-5"
+      >
         <button
           class="bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5] px-[14px] py-[10px] rounded-full text-white"
           @click="previousPage"
