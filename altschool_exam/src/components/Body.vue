@@ -39,6 +39,13 @@
         function seamlessly.
       </p>
     </div>
+    <div class="flex items-center mt-[66px] justify-center">
+      <button
+        class="text-white text-[22px] rounded-full bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5] px-[14px] py-[10px]"
+      >
+        Scroll Down
+      </button>
+    </div>
   </div>
 </template>
 

@@ -1,35 +1,54 @@
 <template>
-  <div class="w-[1440px] mx-auto flex flex-col items-center">
-    <h1
-      class="font-extrabold text-[22px] md:text-[32px] py-[10px] bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5] inline-block text-transparent bg-clip-text"
-    >
-      Github Works
-    </h1>
-    <div class="flex flex-col">
-      <li class="text-white" v-for="repo in displayedRepos" :key="repo.id">
-        <router-link :to="'/repos/' + repo.id">{{ repo.name }}</router-link>
-      </li>
-    </div>
-    <div class="text-white" v-if="loading">Loading...</div>
-    <div class="text-white">
-      <button @click="previousPage" :disabled="page <= 1" v-if="page > 1">
-        Previous
-      </button>
-      <span v-for="pageNumber in pageNumbers" :key="pageNumber">
-        <button
-          @click="setPage(pageNumber)"
-          :class="{ active: pageNumber === page }"
-        >
-          {{ pageNumber }}
-        </button>
-      </span>
-      <button
-        @click="nextPage"
-        :disabled="page >= pageCount"
-        v-if="page < pageCount"
+  <div class="bg-white h-[719px]">
+    <div class="w-[1440px] mx-auto flex flex-col items-center">
+      <h1
+        class="font-extrabold mt-[76px] text-[22px] md:text-[48px] py-[10px] bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5] inline-block text-transparent bg-clip-text"
       >
-        Next
-      </button>
+        Github Works
+      </h1>
+      <div
+        class="flex mt-[38px] flex-wrap items-center justify-center gap-x-[20px] gap-y-[50px]"
+      >
+        <div
+          class="text-white bg-[#1e1e1e] rounded-[10px] w-full sm:w-[300px] md:w-[45%] lg:w-[45%] xl:w-[45%] mb-4 sm:mb-0 md:mr-4 lg:mr-4 xl:mr-4"
+          v-for="repo in displayedRepos"
+          :key="repo.id"
+        >
+          <div class="w-[300px] h-[120px] p-3 gap-x-[100px]">
+            <div>
+              <span class="text-[#AAAAAA]">Repo Name</span>
+              <p>{{ repo.name }}</p>
+            </div>
+            <div class="flex justify-between mt-[8px]">
+              <p><span class="text-[#AAAAAA]">Repo Id: </span>{{ repo.id }}</p>
+              <router-link class="" :to="'/repos/' + repo.id">
+                View More
+              </router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-[#1e1e1e]" v-if="loading">Loading...</div>
+      <div class="text-[#1e1e1e]">
+        <button @click="previousPage" :disabled="page <= 1" v-if="page > 1">
+          Previous
+        </button>
+        <span v-for="pageNumber in pageNumbers" :key="pageNumber">
+          <button
+            @click="setPage(pageNumber)"
+            :class="{ active: pageNumber === page }"
+          >
+            {{ pageNumber }}
+          </button>
+        </span>
+        <button
+          @click="nextPage"
+          :disabled="page >= pageCount"
+          v-if="page < pageCount"
+        >
+          Next
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -43,7 +62,7 @@ export default {
       repos: [],
       loading: true,
       page: 1,
-      pageSize: 5,
+      pageSize: 8,
     };
   },
   computed: {
