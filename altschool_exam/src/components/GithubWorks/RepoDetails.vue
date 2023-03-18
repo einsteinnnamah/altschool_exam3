@@ -8,7 +8,7 @@
         class="text-white bg-gradient-to-t mb-[100px] from-[#5E3EEB] to-[#FFBAD5] px-[14px] py-[10px] rounded-full"
         @click="goBack"
       >
-        Back to Repos
+        Go Back to Repos list
       </button>
       <div class="flex flex-col items-center justify-center">
         <div class="bg-white text-black w-[300px] md:w-[600px] p-5">
