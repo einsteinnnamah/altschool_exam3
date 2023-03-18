@@ -1,3 +1,3 @@
 # altschool_exam3
 
-Link:https://taupe-gumption-22c30b.netlify.app/
+Link: https://thriving-nasturtium-5dd1c4.netlify.app/
