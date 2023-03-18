@@ -2,10 +2,10 @@
   <div class="bg-background_img h-screen w-screen">
     <HeaderView />
     <div
-      class="px-[16px] py-[16px] md:px-[24px] md:py-[24px] lg:w-[1440px] mx-auto items-start gap-[497px]"
+      class="px-[16px] py-[16px] md:px-[24px] md:py-[24px] xl:w-[1440px] w-auto mx-auto items-start gap-[497px]"
     >
       <button
-        class="text-white bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5] px-[14px] py-[10px] rounded-full"
+        class="text-white bg-gradient-to-t mb-[100px] from-[#5E3EEB] to-[#FFBAD5] px-[14px] py-[10px] rounded-full"
         @click="goBack"
       >
         Back to Repos
