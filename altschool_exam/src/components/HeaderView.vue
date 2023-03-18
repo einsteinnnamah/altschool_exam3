@@ -4,18 +4,23 @@
   >
     <div class="text-white text-[28px] font-semibold">Einstein Nnamah</div>
     <div class="hidden sm:flex gap-[16px] items-center">
-      <img
-        class="px-5 rounded-[30px] py-5 bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5]"
-        :src="require('../assets/Socials/Twitter.png')"
-      />
-      <img
-        class="px-5 rounded-[30px] py-5 bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5]"
-        :src="require('../assets/Socials/LInkedin.png')"
-      />
-      <img
-        class="px-5 rounded-[30px] py-5 bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5]"
-        :src="require('../assets/Socials/Medium.png')"
-      />
+      <a target="_blank" href="https://twitter.com/einstein_nnamah">
+        <img
+          class="px-5 rounded-[30px] py-5 bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5]"
+          :src="require('../assets/Socials/Twitter.png')"
+        />
+      </a>
+      <a target="_blank" href="https://www.linkedin.com/in/einsteinnnamah/">
+        <img
+          class="px-5 rounded-[30px] py-5 bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5]"
+          :src="require('../assets/Socials/LInkedin.png')"
+      /></a>
+      <a target="_blank" href="https://medium.com/@einsteinnnamah">
+        <img
+          class="px-5 rounded-[30px] py-5 bg-gradient-to-t from-[#5E3EEB] to-[#FFBAD5]"
+          :src="require('../assets/Socials/Medium.png')"
+        />
+      </a>
     </div>
   </div>
 </template>
