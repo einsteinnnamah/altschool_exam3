@@ -14,7 +14,7 @@
           v-for="repo in displayedRepos"
           :key="repo.id"
         >
-          <div class="w-full h-[130px] p-3 gap-x-[50px] md:gap-x-[100px]">
+          <div class="w-[300px] h-[130px] p-3 gap-x-[50px] md:gap-x-[100px]">
             <div>
               <span class="text-[#AAAAAA]">Repo Name</span>
               <p>{{ repo.name }}</p>
