@@ -10,7 +10,7 @@
       >
         Back to Repos
       </button>
-      <div class="flex flex-col md:items-center items-start justify-center">
+      <div class="flex flex-col items-center justify-center">
         <div class="bg-white text-black w-[300px] md:w-[600px] p-5">
           <h2>{{ repo.name }}</h2>
           <div v-if="loading">Loading...</div>
